@@ -13,13 +13,15 @@ end
 def get_japanese_emoticon(path, emoticon)
   found = false
   emoticons = load_library(path)
+  length = 0
   emoticons.each do |key, value|
     if value[:english] == emoticon
       puts value[:japanese]
       found = true
     end
+    length += 1
   end
-  if found == false
+  if length == emoticons.length && found == false
     puts "Sorry, that emoticon was not found"
   end
 end
