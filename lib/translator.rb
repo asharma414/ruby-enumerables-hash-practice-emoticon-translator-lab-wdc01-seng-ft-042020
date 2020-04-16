@@ -16,7 +16,7 @@ def get_japanese_emoticon(path, emoticon)
   length = 0
   emoticons.each do |key, value|
     if value[:english] == emoticon
-      puts value[:japanese]
+      return value[:japanese]
     end
   end
 end
