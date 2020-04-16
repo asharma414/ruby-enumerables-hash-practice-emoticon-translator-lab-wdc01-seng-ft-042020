@@ -14,8 +14,8 @@ def get_japanese_emoticon(path, emoticon)
   found = true
   emoticons = load_library(path)
   emoticons.each do |key, value|
-    if value[:japanese] == emoticon
-      puts value[:english]
+    if value[:english] == emoticon
+      puts value[:japanese]
       found = true
     else
       found = false
